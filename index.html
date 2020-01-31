@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="stylesheet/header.css">
+    <link rel="stylesheet" href="stylesheet/section.css">
+    <script src="js/game.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>TIC TAC TOE</h1>
+        </div>
+    </header>
+
+    <section>
+
+        <div>
+            <form class="player-info" align="center">
+                <label>Player 1 : </label><input type="text" name="player1_name" required id="player1">
+                <label style="margin-left: 20px">Player 2 : </label><input type="text" name="player2_name" id="player2" required>
+                <input type="button" value="Let's play" onclick="showTable()">
+            </form>
+        </div>
+        <div>
+            <table cellspacing="0" cellpadding="0" class="hidden" id="table">
+                <caption>
+
+                </caption>
+                <tbody>
+                    <tr>
+                        <td><input type="button" id="btn1" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn2" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn3" value="" onclick="change(this.id)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="btn4" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn5" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn6" value="" onclick="change(this.id)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" id="btn7" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn8" value="" onclick="change(this.id)"></td>
+                        <td><input type="button" id="btn9" value="" onclick="change(this.id)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 5px; text-align: center">
+            <p id="winner-name"></p><br>
+            <input type="button" id="btnReset" value="Reset" onclick="reset()" class="hidden">
+        </div>
+    </section>
+</body>
+
+</html>
